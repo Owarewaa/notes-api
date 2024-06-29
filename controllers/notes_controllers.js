@@ -55,7 +55,7 @@ export const getNotes = async (req,res,next) => {
     export const deleteNotesById = async (req, res, next) => {
         try {
             console.log('request', req.body);
-            const deleteDataById = await notesModel.findByIdAndDelete(req.params.id,);
+            const deleteDataById = await notesModel.findByIdAndDelete(req.params.id);
             res.status(200).json('Notes deleted succesffully');
         } catch (error) {
             next(error);
