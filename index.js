@@ -4,6 +4,8 @@ import 'dotenv/config'
 import { dbConnection } from "./config/db.js";
 
 const app = express();
+
+// middleware
 app.use(express.json());
 
 dbConnection();
@@ -12,4 +14,4 @@ app.use(notesRouter)
 
 app.listen(7000, () => {
     console.log('App is listening on port 7000')
-})
+})  
